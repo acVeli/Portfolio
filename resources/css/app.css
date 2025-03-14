@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgb(24, 24, 27);
+}
+
+.header-container{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+.header-nav{
+    width: 33%;
+    margin-right: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold!important;
+    font-feature-settings : "rlig","calt";
+    font-size : 14px;
+    font-variation-settings : normal;
+    font-weight : 500!important;
+    line-height : 20px;
+    letter-spacing : 0.5px;
+}
+
+.header-logo{
+    margin-left: 20px;
+}
+
+.header-logo h1{
+    font-size: 24px;
+    font-weight: bold;
+    font-feature-settings : "rlig","calt";
+    font-size : 24px;
+    font-variation-settings : normal;
+    font-weight : 700!important;
+    line-height : 32px;
+    letter-spacing : 0.5px;
+}
+
+.header-logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.main-container h1{
+    background: rgba(52, 114, 239, 0.1);
+    font-size: .875rem;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    font-weight: 500;
+    padding : 4px 12px;
+    color: rgb(52, 114, 239);
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.digital-experiences h2{
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: -.025em;
+}
+
+.about-me p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: rgb(113, 113, 122);
+    margin-bottom: 45px;
+}
+
+.cta-buttons .main-get-in-touch{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(52, 114, 239);
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+
+.cta-buttons .main-get-in-touch:hover{
+    background-color: rgb(52, 114, 239, 0.8);
+}
+
+.cta-buttons .main-view-projects:hover{
+    text-decoration: none;
+    color: rgb(24, 24, 27);
+    background-color: rgb(212, 212, 212);
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin-left: 16px;
+}
+
+.cta-buttons .main-view-projects{
+    text-decoration: none;
+    color: rgb(24, 24, 27);
+    background-color: rgb(244, 244, 245);
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin-left: 16px;
+}
+.main-social-links ul{
+    display: flex;
+    list-style: none;
+    margin-top: 50px;
+}
+.main-social-links li{
+    margin-right: 16px;
+}
+.main-social-links ul li a{
+    text-decoration: none;
+    color: rgb(113, 113, 122);
+}
+.main-social-links ul li a svg{
+    color: rgb(113, 113, 122);
+}
+.main-social-links ul li a svg:hover{
+    color: rgb(52, 114, 239);
+}
+.main-scroll-down{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-scroll-down a{
+    text-decoration: none;
+    color: rgb(113, 113, 122);
+}
+.main-scroll-down a svg{
+    color: rgb(113, 113, 122);
+}
+.main-scroll-down a svg:hover{
+    color: rgb(52, 114, 239);
+}
+.animate-bounce {
+    animation: 1s ease 0s infinite normal none running bounce;
+}
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.projects-title h2{
+    background: rgba(52, 114, 239, 0.1);
+    font-size: .875rem;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    font-weight: 500;
+    padding: 4px 12px;
+    color: rgb(52, 114, 239);
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+#projects{
+    background-color: rgba(244, 244, 245, 0.5);
+    padding: 96px 0;
+}
+.project:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px #0000000d;
+}
+.projects-description p{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: rgb(113, 113, 122);
+    margin-bottom: 45px;
+}
+.projects-recent h3{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: -.025em;
+}
+.projects-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.projects-grid{
+    padding-top: 6rem;
+}
+.projects-list li.project{
+    width: 27%;
+    margin-bottom: 16px;
+}
+.project-image{
+    overflow: hidden;
+    max-height: 300px;
+    animation-duration: .5s;
+    transition-duration: .5s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.project-image img{
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
+    transition-duration: .5ms;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.project-image img:hover{
+    overflow: hidden;
+    transition-duration: .5ms;
+    transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}
+.project-details{
+    background-color: #fff;
+    padding: 1.5rem;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project-title{
+    margin-bottom: .5rem;
+}
+.project-title h2{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.project-description p{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgb(113, 113, 122);
+}
+.project-technologies ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-top: 1rem;
+}
+.project-technologies li{
+    margin-right: 1rem;
+}
+.project-technologies li a{
+    text-decoration: none;
+    color: #000;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    background-color: rgb(244, 244, 245);
+    border-radius: 9999px;
+}
+.project-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+.project-links .project-link{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-links .project-link a{
+    text-decoration: none;
+    color: rgb(52, 114, 239);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-links .project-link a svg{
+    margin-right: .1rem;
+    width: 16px;
+}
+#about-me{
+    background-color: #fff;
+    padding: 96px 0;
+}
+.about-me-container{
+    display: flex;
+    justify-content: space-around;
+}
+.about-me-content{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.about-me-image{
+    width: 45%;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me-image-container{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.about-me-image img{
+    height: 100%;
+    z-index: 2;
+    border-radius: 15px;
+    position: relative;
+}
+.about-me-title span{
+    background: rgba(52, 114, 239, 0.1);
+    font-size: .875rem;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    font-weight: 500;
+    padding: 4px 12px;
+    color: rgb(52, 114, 239);
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+.about-me-title{
+    margin-bottom: 1rem;
+}
+.about-me-passionate{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -.025em;
+    margin-bottom: 1.5rem;
+}
+.about-me-description p{
+    margin-bottom: 1rem;
+    line-height: 24px;
+    color: rgb(113, 113, 122);
+    font-weight: 400;
+}
+.grey-square1, .grey-square2{
+    background-color: rgb(244, 244, 245);
+    border-radius: 12px;
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+}
+.grey-square1{
+    position: absolute;
+    bottom: -40px;
+    left: -5px;
+}
+.grey-square2{
+    position: absolute;
+    top: -35px;
+    right: -10px;
+}
+.about-me-download{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 244, 245);
+    padding: 8px 16px;
+    border-radius: 12px;
+    max-width: fit-content;
+}
+.about-me-cta{
+    margin-top: 2rem;
+}
+.about-me-download span{
+    margin-left: 0.5rem;
+    color : rgb(24, 24, 27);
+}
+.about-me-download svg{
+    width: 18px;
+    color: rgb(24, 24, 27);
+}
+.skills-container{
+    background-color: rgba(244, 244, 245, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 96px 0;
+}
+.skills-title h2{
+    background: rgba(52, 114, 239, 0.1);
+    font-size: .875rem;
+    border-radius: 9999px;
+    box-sizing: border-box;
+    font-weight: 500;
+    padding: 4px 12px;
+    color: rgb(52, 114, 239);
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
