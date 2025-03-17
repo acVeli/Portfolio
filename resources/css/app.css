@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+  }  
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -821,6 +824,9 @@ footer{
     width: 1.25rem;
     height: 1.25rem;
 }
+.menu-icon{
+    display: none;
+}
 @keyframes bounce {
     0%, 100% {
         transform: translateY(-25%);
@@ -853,6 +859,65 @@ footer{
     100% {
         transform: translateY(100%);
         opacity: 0;
+        display: none;
+    }
+}
+@media (max-width: 1600px) {
+    .header-nav {
+        width: 30%;
+    }
+}
+@media (max-width: 1100px) {
+    #menu{
+        display: none;
+        z-index: 2;
+    }
+    #menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px #0000000d;
+    }
+    #menu-close{
+        display: none;
+        z-index: 3;
+    }
+    #menu-close.active{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    .menu-icon {
+        display: flex;
+        cursor: pointer;
+        justify-content: flex-end;
+    }
+    .nav-links a {
+        margin-bottom: 1rem;
+    }
+    .nav-links a::after {
+        display: none;
+    }
+    .nav-links a:hover::after {
         display: none;
     }
 }

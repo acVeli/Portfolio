@@ -14,13 +14,23 @@
                 </a>
             </div>
             <div class="header-nav">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div class="nav-links-container" id="menu">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <div id="menu-burger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6 transition-all" data-lov-id="src/components/Navbar.tsx:66:12" data-lov-name="Menu" data-component-path="src/components/Navbar.tsx" data-component-line="66" data-component-file="Navbar.tsx" data-component-name="Menu" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20transition-all%22%7D"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    </div>
+                    <div id="menu-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6 transition-all" data-lov-id="src/components/Navbar.tsx:64:12" data-lov-name="X" data-component-path="src/components/Navbar.tsx" data-component-line="64" data-component-file="Navbar.tsx" data-component-name="X" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20transition-all%22%7D"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -496,6 +506,23 @@
         backToTop.addEventListener('click', function() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+        });
+
+        let menuBurger = document.getElementById('menu-burger');
+        let menu = document.getElementById('menu');
+        let menuClose = document.getElementById('menu-close');
+        menuBurger.addEventListener('click', function() {
+            if(!menu.classList.contains('active')) {
+                menu.classList.add('active');
+                menuClose.classList.add('active');
+            } else {
+                menu.classList.remove('active');
+                menuClose.classList.remove('active');
+            }
+        });
+        menuClose.addEventListener('click', function() {
+            menu.classList.remove('active');
+            menuClose.classList.remove('active');
         });
     </script>
 </body>
