@@ -18,8 +18,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about-me">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -37,8 +37,8 @@
                 <p>I design and develop applications with a focus on intuitive<br> user experiences, clean code, and modern technologies.</p>
             </div>
             <div class="cta-buttons">
-                <a class="main-get-in-touch" href="#">Get in Touch</a>
-                <a class="main-view-projects" href="#">View Projects</a>
+                <a class="main-get-in-touch" href="#contact">Get in Touch</a>
+                <a class="main-view-projects" href="#projects">View Projects</a>
             </div>
             <div class="main-social-links">
                 <ul>
@@ -199,149 +199,181 @@
             <div class="skills-title">
                 <h2>Skills</h2>
             </div>
-            <div>
+            <div class="skills-description">
                 <h3>My Technical Skills</h3>
             </div>
-            <div>
+            <div class="skills-content">
                 <p>I've worked with a variety of technologies and tools. Here's a snapshot of my technical expertise.</p>
             </div>
-            <div>
-                <ul>
-                    <li>
-                        <div>
+            <div class="skills-grid">
+                <ul class="skills-list">
+                    <li class="skills-category">
+                        <div class="skills-category-title">
                             <h4>Frontend</h4>
                         </div>
-                        <div>
+                        <div class="skills-category-list">
                             <ul>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>HTML</h5>
                                         <span>95%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="95"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>JavaScript</h5>
                                         <span>90%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="90"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>React</h5>
                                         <span>92%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="92"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>TypeScript</h5>
                                         <span>85%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="85"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Next.js</h5>
                                         <span>80%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="80"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>TailwindCSS</h5>
                                         <span>90%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="90"></div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <div>
+                    <li class="skills-category">
+                        <div class="skills-category-title">
                             <h4>Backend</h4>
                         </div>
-                        <div>
+                        <div class="skills-category-list">
                             <ul>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Node.js</h5>
                                         <span>75%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="75"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Express</h5>
                                         <span>75%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="75"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>MongoDB</h5>
                                         <span>70%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="70"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>REST API</h5>
                                         <span>85%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="85"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>GraphQL</h5>
                                         <span>65%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="65"></div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <div>
+                    <li class="skills-category">
+                        <div class="skills-category-title">
                             <h4>Tools & Others</h4>
                         </div>
-                        <div>
+                        <div class="skills-category-list">
                             <ul>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Git & GitHub</h5>
                                         <span>90%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="90"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Figma</h5>
                                         <span>80%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="80"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Responsive Design</h5>
                                         <span>95%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="95"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>Jest</h5>
                                         <span>70%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="70"></div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <div>
+                                    <div class="skills-category-item">
                                         <h5>CI/CD</h5>
                                         <span>65%</span>
                                     </div>
-                                    <div></div>
+                                    <div class="skill-bar">
+                                        <div class="progress-bar" data-percent="65"></div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -351,21 +383,95 @@
         </div>
     </section>
 
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-description">
+                <h3>Get In Touch</h3>
+            </div>
+            <div class="contact-content">
+                <p>Have a project in mind or want to explore collaboration opportunities? Feel free to reach out!</p>
+            </div>
+            <div class="contact-details">
+                <div class="contact-social-links">
+                    <ul>
+                        <li class="contact-social-way">
+                            <div class="contact-social-svgs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5 text-primary" data-lov-id="src/components/Contact.tsx:81:18" data-lov-name="Mail" data-component-path="src/components/Contact.tsx" data-component-line="81" data-component-file="Contact.tsx" data-component-name="Mail" data-component-content="%7B%22className%22%3A%22w-5%20h-5%20text-primary%22%7D"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
+                            <div class="ways-to-contact">
+                                <h4>Email</h4>
+                                <p>contact@covu.fr</p>
+                            </div>
+                        </li>
+                        <li class="contact-social-way">
+                            <div class="contact-social-svgs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5 text-primary" data-lov-id="src/components/Contact.tsx:91:18" data-lov-name="MapPin" data-component-path="src/components/Contact.tsx" data-component-line="91" data-component-file="Contact.tsx" data-component-name="MapPin" data-component-content="%7B%22className%22%3A%22w-5%20h-5%20text-primary%22%7D"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                            <div class="ways-to-contact">
+                                <h4>Location</h4>
+                                <p>Paris, FR</p>
+                            </div>
+                        </li>
+                        <li class="contact-social-way">
+                            <div class="contact-social-svgs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-5 h-5 text-primary" data-lov-id="src/components/Contact.tsx:101:18" data-lov-name="Phone" data-component-path="src/components/Contact.tsx" data-component-line="101" data-component-file="Contact.tsx" data-component-name="Phone" data-component-content="%7B%22className%22%3A%22w-5%20h-5%20text-primary%22%7D"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                            <div class="ways-to-contact">
+                                <h4>Phone</h4>
+                                <p>(+33) 0659115866</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="contact-form-name-email">
+                            <div class="contact-form-name">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="contact-form-email">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@exemple.com" required>
+                            </div>
+                        </div>
+                        <div class="contact-form-subject">
+                            <label for="message">Subject</label>
+                            <input id="subject" name="subject" type="text" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="contact-form-message">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Hello I'd like to talk about ..." required></textarea>
+                        </div>
+                        <div class="contact-form-submit">
+                            <button type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-4 h-4 mr-2" data-lov-id="src/components/Contact.tsx:221:20" data-lov-name="Send" data-component-path="src/components/Contact.tsx" data-component-line="221" data-component-file="Contact.tsx" data-component-name="Send" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-2%22%7D"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>Send Message</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div>
             <div>
-                <h2></h2>
-                <p></p>
+                <h2>Anton COVU</h2>
+                <p>Creating exceptional digital experiences</p>
             </div>
             <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div>
-                <h2></h2>
-                <p></p>
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
         </div>
     </footer>
+
+    <script>
+        let progressbars = document.querySelectorAll('.progress-bar');
+        progressbars.forEach(progressbar => {
+            let percent = progressbar.getAttribute('data-percent');
+            progressbar.style.width = percent + '%';
+        });
+    </script>
 </body>
 </html>
