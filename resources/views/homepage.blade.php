@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <!-- vite files css js-->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -81,7 +83,7 @@
             <div class="projects-grid">
                 <ul class="projects-list">
                     <li class="project">
-                        <div>
+                        <div class="project-content">
                             <div class="project-image">
                                 <img src="img/project-1.avif" alt="E-Commerce Platform">
                             </div>
@@ -112,7 +114,7 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div>
+                        <div class="project-content">
                             <div class="project-image">
                                 <img src="img/project-2.avif" alt="Portfolio Website">
                             </div>
@@ -142,7 +144,7 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div>
+                        <div class="project-content">
                             <div class="project-image">
                                 <img src="img/project-3.avif" alt="Task Management App">
                             </div>
@@ -511,18 +513,22 @@
         let menuBurger = document.getElementById('menu-burger');
         let menu = document.getElementById('menu');
         let menuClose = document.getElementById('menu-close');
+        let body = document.body;
         menuBurger.addEventListener('click', function() {
             if(!menu.classList.contains('active')) {
                 menu.classList.add('active');
                 menuClose.classList.add('active');
+                body.style.overflow = 'hidden';
             } else {
                 menu.classList.remove('active');
                 menuClose.classList.remove('active');
+                body.style.overflow = 'auto';
             }
         });
         menuClose.addEventListener('click', function() {
             menu.classList.remove('active');
             menuClose.classList.remove('active');
+            body.style.overflow = 'auto';
         });
     </script>
 </body>

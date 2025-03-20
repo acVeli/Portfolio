@@ -313,6 +313,7 @@ body{
     height: auto;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
+    max-height: 260px;
 }
 .project-image img:hover{
     overflow: hidden;
@@ -339,7 +340,6 @@ body{
 .project-description p{
     font-size: .875rem;
     line-height: 1.25rem;
-    margin-bottom: 1rem;
     color: rgb(113, 113, 122);
 }
 .project-technologies ul{
@@ -862,12 +862,55 @@ footer{
         display: none;
     }
 }
-@media (max-width: 1600px) {
+@media screen and (max-width: 1700px) {
+    .project-image img{
+        height: 300px;
+    }
+    .project-description {
+        min-height: 80px;
+        margin-bottom: 1rem;
+    }
+    .project-description p{
+        height: 100%;
+    }
+}
+@media screen and (max-width: 1600px) {
     .header-nav {
         width: 30%;
     }
 }
-@media (max-width: 1100px) {
+
+@media screen and (max-width: 1320px) {
+    .projects-grid {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll; 
+        width: 100%;
+    }
+
+    .projects-list {
+        display: flex;
+        gap: 16px; 
+        width: 2000px;
+        flex-wrap: nowrap;
+    }
+
+    .project {
+        min-width: 300px;
+        flex-shrink: 0; 
+    }
+    
+    .about-me-container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .about-me-content, .about-me-image{
+        margin-bottom: 3rem;
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 1100px) {
     #menu{
         display: none;
         z-index: 2;
@@ -913,11 +956,25 @@ footer{
     }
     .nav-links a {
         margin-bottom: 1rem;
+        font-size: 24px;
     }
     .nav-links a::after {
         display: none;
     }
     .nav-links a:hover::after {
         display: none;
+    }
+    .nav-links li{
+        margin-bottom: 1.5rem;
+    }
+    #menu-close svg{
+        width: 45px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-links-container ul.nav-links li {
+        margin-bottom: 3.5rem !important;
     }
 }
