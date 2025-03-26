@@ -904,9 +904,20 @@ footer{
         align-items: center;
         flex-direction: column;
     }
+    .about-me-title{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-me-passionate{
+        text-align: center;
+    }
     .about-me-content, .about-me-image{
         margin-bottom: 3rem;
         width: 80%;
+    }
+    .about-me-download{
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -1005,6 +1016,9 @@ footer{
         flex-shrink: 0; /* Empêche la déformation */
         width: calc(33.33% - 16px); /* Ajuste pour avoir 3 colonnes */
     }
+    .projects-grid {
+        padding-top: 3rem;
+    }
     
 }
 
@@ -1032,5 +1046,188 @@ footer{
         order: 1;
         width: 80%;
         margin-bottom: 2rem;
+    }
+    .about-me-image img {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-content{
+        margin-bottom: 20px;
+    }
+    #about-me, #projects {
+        padding: 60px 0;
+    }
+    .skills-container, .contact-container{
+        padding: 35px 0;
+    }
+    .digital-experiences h2 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+    .about-me p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .projects-list li.project {
+        width: 400px;
+    }
+    .projects-grid {
+        padding-left: 50px;
+    }
+    ul.projects-list{
+        width: 1400px;
+    }
+    .projects-recent h3, .about-me-passionate { 
+        font-size: 2rem;
+    }
+    .contact-content p, .projects-description p, .skills-content p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+    }
+    .skills-content p {
+        margin-bottom: 2rem;
+    }
+    .about-me-image img {
+        height: 350px;
+    }
+    .skills-container{
+        padding-bottom: 65px;
+    }
+}
+
+@media screen and (max-width: 488px) {
+    .digital-experiences h2 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+    .about-me p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .projects-grid, ul.skills-list {
+        padding-left: 50px;
+    }
+    ul.projects-list, ul.skills-list {
+        width: 1200px;
+        min-width: 1200px;
+    }
+    .about-me-content, .about-me-image {
+        margin-bottom: 3rem;
+        width: 95%;
+    }
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-left,.footer-right{
+        padding : 0;
+    }
+    .footer-left h2, .footer-left p{
+        text-align: center;
+    }
+    .footer-social li{
+        margin-left: 0;
+    }
+    .footer-social ul{
+        width: 100%;
+        justify-content: center;
+    }
+    .skills-category, .projects-list li.project {
+        width: calc(30% - 16px);
+    }
+    .contact-social-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    .about-me p {
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .projects-grid, ul.skills-list {
+        padding-left: 20px;
+    }
+    .contact-form{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .projects-grid, ul.skills-list{
+        padding-left: 5px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .project-title h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .projects-list {
+        gap: 0px;
+    }
+    .project-details{
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 382px) { 
+    ul.projects-list{
+        justify-content: flex-start;
+    }
+    ul.projects-list li.project {
+        margin-right: 20px;
+    }
+    ul.projects-list, ul.skills-list {
+        width: 1050px;
+        min-width: 1050px;
+    }
+    .project-technologies ul{
+        flex-wrap: wrap;
+    }
+    .project-technologies ul li{
+        margin-bottom: 0.5rem;
+    }
+    .project-image{
+        max-height: 200px;
+    }
+    .about-me p {
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    .project-image {
+        max-height: 180px;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .cta-buttons .main-view-projects {
+        margin-left: 5px;
+    }
+    .contact-social-links {
+        width: 80%;
+    }
+    .main-social-links {
+        width: 100%;
+    }
+    .main-social-links ul{
+        width: 40%;
+        justify-content: space-around;
+        margin: 50px auto 0 auto;
+    }
+    .main-social-links li{
+        margin-right: 0;
     }
 }
