@@ -509,27 +509,50 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         });
+        
 
-        let menuBurger = document.getElementById('menu-burger');
-        let menu = document.getElementById('menu');
-        let menuClose = document.getElementById('menu-close');
-        let body = document.body;
-        menuBurger.addEventListener('click', function() {
-            if(!menu.classList.contains('active')) {
-                menu.classList.add('active');
-                menuClose.classList.add('active');
-                body.style.overflow = 'hidden';
-            } else {
+        //script when the viewport width is under 1100px
+        if(window.innerWidth <= 1100) {
+            let menuBurger = document.getElementById('menu-burger');
+            let menu = document.getElementById('menu');
+            let menuClose = document.getElementById('menu-close');
+            let body = document.body;
+            let navLinks = document.querySelectorAll('.nav-links li a');
+            let closeMenuButton = document.getElementById('menu-close');
+
+            function closeMenu() {
                 menu.classList.remove('active');
                 menuClose.classList.remove('active');
                 body.style.overflow = 'auto';
             }
-        });
-        menuClose.addEventListener('click', function() {
-            menu.classList.remove('active');
-            menuClose.classList.remove('active');
-            body.style.overflow = 'auto';
-        });
+
+            menuBurger.addEventListener('click', function() {
+                if(!menu.classList.contains('active')) {
+                    menu.classList.add('active');
+                    menuClose.classList.add('active');
+                    body.style.overflow = 'hidden';
+                } else {
+                    closeMenu();
+                }
+            });
+
+            closeMenuButton.addEventListener('click', function() {
+                closeMenu();
+            });
+
+            menuClose.addEventListener('click', function() {
+                menu.classList.remove('active');
+                menuClose.classList.remove('active');
+                body.style.overflow = 'auto';
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMenu();
+                });
+            });
+        }
+        
     </script>
 </body>
 </html>
