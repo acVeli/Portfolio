@@ -7,7 +7,7 @@
     <!-- vite files css js-->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body id="portfolio">
     <header>
         <div class="header-container">
             <div class="header-logo">
@@ -484,75 +484,5 @@
 
     <button id="backToTop"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up w-5 h-5" data-lov-id="src/pages/Index.tsx:78:8" data-lov-name="ArrowUp" data-component-path="src/pages/Index.tsx" data-component-line="78" data-component-file="Index.tsx" data-component-name="ArrowUp" data-component-content="%7B%22className%22%3A%22w-5%20h-5%22%7D"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg></button>
 
-    <script>
-        let progressbars = document.querySelectorAll('.progress-bar');
-        progressbars.forEach(progressbar => {
-            let percent = progressbar.getAttribute('data-percent');
-            progressbar.style.width = percent + '%';
-        });
-
-        let backToTop = document.getElementById('backToTop');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                if(backToTop.classList.contains('inactive')) {
-                    backToTop.classList.remove('inactive');
-                }
-                backToTop.classList.add('active');
-                backToTop.style.animation = 'fromBottom 0.5s forwards';
-            } else {
-                backToTop.style.animation = 'toBottom 0.5s forwards';
-                backToTop.classList.remove('active');
-                backToTop.classList.add('inactive');
-            }
-        };
-        backToTop.addEventListener('click', function() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-        
-
-        //script when the viewport width is under 1100px
-        if(window.innerWidth <= 1100) {
-            let menuBurger = document.getElementById('menu-burger');
-            let menu = document.getElementById('menu');
-            let menuClose = document.getElementById('menu-close');
-            let body = document.body;
-            let navLinks = document.querySelectorAll('.nav-links li a');
-            let closeMenuButton = document.getElementById('menu-close');
-
-            function closeMenu() {
-                menu.classList.remove('active');
-                menuClose.classList.remove('active');
-                body.style.overflow = 'auto';
-            }
-
-            menuBurger.addEventListener('click', function() {
-                if(!menu.classList.contains('active')) {
-                    menu.classList.add('active');
-                    menuClose.classList.add('active');
-                    body.style.overflow = 'hidden';
-                } else {
-                    closeMenu();
-                }
-            });
-
-            closeMenuButton.addEventListener('click', function() {
-                closeMenu();
-            });
-
-            menuClose.addEventListener('click', function() {
-                menu.classList.remove('active');
-                menuClose.classList.remove('active');
-                body.style.overflow = 'auto';
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    closeMenu();
-                });
-            });
-        }
-        
-    </script>
 </body>
 </html>
