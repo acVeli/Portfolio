@@ -971,10 +971,66 @@ footer{
         width: 45px;
         height: 40px;
     }
+    .contact-social-links{
+        width: 30%;
+    }
+    .contact-form{
+        width: 60%;
+    }
+    .skills-content p, .contact-content p, .projects-description p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    .skills-grid{
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        scroll-padding-left: 50px;
+        width: 100%;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        display: flex;
+        justify-content: flex-start;
+    }
+    ul.skills-list{
+        display: flex;
+        gap: 40px;
+        justify-content: flex-start;
+        min-width: 1400px;
+        flex-wrap: nowrap;
+        padding-left: 50px;
+    }
+    .skills-category{
+        flex-shrink: 0; /* Empêche la déformation */
+        width: calc(33.33% - 16px); /* Ajuste pour avoir 3 colonnes */
+    }
+    
 }
 
 @media screen and (max-width: 1000px) {
     .nav-links-container ul.nav-links li {
         margin-bottom: 3.5rem !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .contact-details{
+        flex-direction: column;
+    }
+    .contact-social-links{
+        order: 2;
+        width: 50%;
+    }
+    .contact-social-way {
+        display: flex;
+        margin-bottom: 2rem;
+        border: 1px solid #e0e0e0;
+        padding: 12px;
+    }
+    .contact-form{
+        order: 1;
+        width: 80%;
+        margin-bottom: 2rem;
     }
 }
