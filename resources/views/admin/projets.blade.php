@@ -21,7 +21,7 @@
             <thead class="projects-table-header">
                 <tr>
                     <th class="projects-table-cell">Nom</th>
-                    <th class="projects-table-cell">Image</th>
+                    <th class="projects-table-cell cell-image">Image</th>
                     <th class="projects-table-cell">Description</th>
                     <th class="projects-table-cell">Actions</th>
                 </tr>
@@ -31,15 +31,14 @@
                 @foreach($projects as $project)
                 <tr class="projects-table-row">
                     <td class="projects-table-cell">{{ $project->title }}</td>
-                    <td class="projects-table-cell">
+                    <td class="projects-table-cell cell-image">
                         <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="projects-image">
                     </td>
-                    <td class="projects-table-cell">{{ $project->description }}</td>
-                    <td class="projects-table-cell">
-                        <a href="#" class="projects-edit-button">Modifier</a>
-                        <form action="#" method="POST" class="projects-delete-form">
+                    <td class="projects-table-cell cell-description">{{ $project->description }}</td>
+                    <td class="projects-table-cell cell-actions">
+                        <a href="{{route('edit_projet', ['id' => $project->id])}}" class="projects-edit-button">Modifier</a>
+                        <form action="{{ route('delete_projet', ['id' => $project->id]) }}" method="POST" class="projects-delete-form">
                             @csrf
-                            @method('DELETE')
                             <button type="submit" class="projects-delete-button">Supprimer</button>
                         </form>
                     </td>
@@ -49,7 +48,7 @@
         </table>
     </main>
     <footer class="projects-footer">
-        <p class="projects-footer-text">© 2025 Mon Dashboard. Tous droits réservés.</p>
+        <p class="projects-footer-text">© 2025 Anton COVU. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

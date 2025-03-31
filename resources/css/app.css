@@ -64,6 +64,14 @@ a:hover {
 * {
     box-sizing: border-box;
 }
+.alert.alert-success{
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
 /**register/login**/
 .authform{
     padding: 20px;
@@ -296,7 +304,17 @@ body.create-projet {
     color: #333333;
     margin-bottom: 20px;
 }
-
+.projects-table-cell.cell-image{
+    width: 100px;
+}
+.projects-table-cell.cell-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-table-cell.cell-description{
+    text-align: center;
+}
 .create-projet-form .form-group {
     margin-bottom: 15px;
 }
@@ -586,6 +604,7 @@ header.active {
     flex-wrap: wrap;
 }
 .projects-grid{
+    width: 100%;
     padding-top: 6rem;
 }
 .projects-list li.project{
@@ -690,6 +709,55 @@ header.active {
     margin-right: .1rem;
     width: 16px;
 }
+.edit-projet-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-projet-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-projet-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.edit-projet-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.edit-projet-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-projet-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-projet-button:hover {
+    background-color: #0056b3;
+}
+
 #about-me{
     background-color: #fff;
     padding: 96px 0;

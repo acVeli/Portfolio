@@ -64,24 +64,58 @@ class ProjetController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Projet $projet)
+    public function edit($id)
     {
-        //
+        $project = Projet::find($id);
+
+        if (!$project) {
+            return redirect()->route('projects.index')->with('error', 'Projet introuvable.');
+        }
+
+        return view('admin.edit_projet', compact('project'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Projet $projet)
     {
-        //
+
+        $projet = Projet::findOrFail($request->id);
+
+        $validatedData = $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:1000',
+            'tags' => 'nullable|string',
+            'project_link' => 'nullable|url|max:255',
+            'github_link' => 'nullable|url|max:255'
+        ]);
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+            $validatedData['image'] = $imagePath;
+        }
+
+        $projet->update($validatedData);
+
+        return redirect()->route('projets')->with('success', 'Projet mis à jour avec succès.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Projet $projet)
+    public function destroy(Projet $projet, Request $request)
     {
-        //
+        $projet = Projet::findOrFail($request->id);
+        if ($projet->image) {
+            $imagePath = public_path('storage/' . $projet->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+        $projet->delete();
+        return redirect()->route('projets')->with('success', 'Projet supprimé avec succès.');
     }
 }

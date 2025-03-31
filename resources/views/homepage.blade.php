@@ -86,97 +86,38 @@
             </div>
             <div class="projects-grid">
                 <ul class="projects-list">
-                    <li class="project">
-                        <div class="project-content">
-                            <div class="project-image">
-                                <img src="img/project-1.avif" alt="E-Commerce Platform">
-                            </div>
-                            <div class="project-details">
-                                <div class="project-title">
-                                    <h2>E-Commerce Platform</h2>
+                    @foreach($projects as $project)
+                        <li class="project">
+                            <div class="project-content">
+                                <div class="project-image">
+                                    <img src="{{'storage/'.$project->image}}" alt="E-Commerce Platform">
                                 </div>
-                                <div class="project-description">
-                                    <p>A modern e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, and payment processing.</p>
-                                </div>
-                                <div class="project-technologies">
-                                    <ul>
-                                        <li><a href="#">React</a></li>
-                                        <li><a href="#">Node.js</a></li>
-                                        <li><a href="#">MongoDB</a></li>
-                                        <li><a href="#">Stripe</a></li>
-                                    </ul>
-                                </div>
-                                <div class="project-links">
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:117:22" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="117" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg><span>Live Demo</span></a>
+                                <div class="project-details">
+                                    <div class="project-title">
+                                        <h2>{{$project->title}}</h2>
                                     </div>
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:128:22" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="128" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span>Code</span></a>
+                                    <div class="project-description">
+                                        <p>{{$project->description}}</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project-content">
-                            <div class="project-image">
-                                <img src="img/project-2.avif" alt="Portfolio Website">
-                            </div>
-                            <div class="project-details">
-                                <div class="project-title">
-                                    <h2>Portfolio Website</h2>
-                                </div>
-                                <div class="project-description">
-                                    <p>A minimalist portfolio website showcasing my projects and skills. Built with React and TailwindCSS for a clean, responsive design.</p>
-                                </div>
-                                <div class="project-technologies">
-                                    <ul>
-                                        <li><a href="#">React</a></li>
-                                        <li><a href="#">TailwindCSS</a></li>
-                                        <li><a href="#">Framer Motion</a></li>
-                                    </ul>
-                                </div>
-                                <div class="project-links">
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:117:22" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="117" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg><span>Live Demo</span></a>
+                                    <div class="project-technologies">
+                                        <ul>
+                                            @foreach(explode(',', $project->tags) as $tag)
+                                            <li><a href="#">{{$tag}}</a></li>
+                                            @endforeach
+                                        </ul>
                                     </div>
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:128:22" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="128" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span>Code</span></a>
+                                    <div class="project-links">
+                                        <div class="project-link">
+                                            <a href={{$project->project_link}}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:117:22" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="117" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg><span>Live Demo</span></a>
+                                        </div>
+                                        <div class="project-link">
+                                            <a href={{$project->github_link}}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:128:22" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="128" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span>Code</span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project-content">
-                            <div class="project-image">
-                                <img src="img/project-3.avif" alt="Task Management App">
-                            </div>
-                            <div class="project-details">
-                                <div class="project-title">
-                                    <h2>Task Management App</h2>
-                                </div>
-                                <div class="project-description">
-                                    <p>A productivity app for managing tasks and projects. Features include drag-and-drop organization, calendar integration, and team collaboration.</p>
-                                </div>
-                                <div class="project-technologies">
-                                    <ul>
-                                        <li><a href="#">React</a></li>
-                                        <li><a href="#">TypeScript</a></li>
-                                        <li><a href="#">Firebase</a></li>
-                                    </ul>
-                                </div>
-                                <div class="project-links">
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:117:22" data-lov-name="ExternalLink" data-component-path="src/components/Projects.tsx" data-component-line="117" data-component-file="Projects.tsx" data-component-name="ExternalLink" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg><span>Live Demo</span></a>
-                                    </div>
-                                    <div class="project-link">
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-4 h-4 mr-1" data-lov-id="src/components/Projects.tsx:128:22" data-lov-name="Github" data-component-path="src/components/Projects.tsx" data-component-line="128" data-component-file="Projects.tsx" data-component-name="Github" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20mr-1%22%7D"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span>Code</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
