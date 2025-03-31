@@ -110,6 +110,14 @@ class ProjetController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
+            // Supprimer l'ancienne image si elle existe
+            if ($projet->image) {
+                $oldImagePath = public_path('storage/' . $projet->image);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+            // Traiter la nouvelle image
             $imagePath = $request->file('image')->store('images', 'public');
             $this->convertImgToAvifService->convert(
                 public_path('storage/' . $imagePath),
