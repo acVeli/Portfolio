@@ -30,3 +30,7 @@ Route::get('/admin/projets', [ProjetController::class, 'index'])->middleware('au
 Route::get('/admin/skills', function () {
     return view('admin.skills');
 })->middleware('auth')->name('skills');
+
+Route::get('/admin/projets/create', [ProjetController::class, 'create'])->middleware('auth')->name('create_projet');
+
+Route::post('/admin/projets/store', [ProjetController::class, 'store'])->middleware('auth')->name('store_projet');

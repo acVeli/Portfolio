@@ -84,7 +84,7 @@ a:hover {
     line-height: 32px;
     letter-spacing: 0.5px;
 }
-/* Global Styles */
+/* Dashboard */
 body.dashboard-body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -92,7 +92,6 @@ body.dashboard-body {
     background-color: #f4f4f9;
 }
 
-/* Header Styles */
 header.dashboard-header {
     background-color: #333;
     color: #fff;
@@ -104,7 +103,6 @@ h1.dashboard-title {
     margin: 0;
 }
 
-/* Navigation Styles */
 nav.dashboard-nav {
     background-color: #444;
     padding: 10px 0;
@@ -131,7 +129,6 @@ a.dashboard-link:hover {
     text-decoration: underline;
 }
 
-/* Main Content Styles */
 main.dashboard-main {
     padding: 20px;
 }
@@ -152,7 +149,6 @@ p.dashboard-section-content {
     margin: 0;
 }
 
-/* Footer Styles */
 footer.dashboard-footer {
     background-color: #333;
     color: #fff;
@@ -164,7 +160,7 @@ p.dashboard-footer-text {
     margin: 0;
 }
 
-/* Global Styles */
+/* Projects */
 body.projects-body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -172,7 +168,6 @@ body.projects-body {
     background-color: #f4f4f9;
 }
 
-/* Header Styles */
 header.projects-header {
     background-color: #333;
     color: #fff;
@@ -199,7 +194,6 @@ a.projects-create-button:hover {
     background-color: #0056b3;
 }
 
-/* Table Styles */
 table.projects-table {
     width: 100%;
     margin: 20px auto;
@@ -229,7 +223,6 @@ tr.projects-table-row:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Buttons */
 a.projects-edit-button, button.projects-delete-button {
     background-color: #28A745;
     color: #fff;
@@ -255,7 +248,6 @@ button.projects-delete-button:hover {
     background-color: #C82333;
 }
 
-/* Footer Styles */
 footer.projects-footer {
     background-color: #333;
     color: #fff;
@@ -266,6 +258,97 @@ footer.projects-footer {
 p.projects-footer-text {
     margin: 0;
 }
+
+
+
+
+body.create-projet {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.create-projet-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.create-projet-back-button{
+    background-color: #007BFF;
+    color: #ffffff!important;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.create-projet-back-button:hover {
+    background-color: #0056b3;
+}
+
+.create-projet-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.create-projet-form .form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #007BFF;
+}
+
+.form-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
 
 /**portfolio**/
 body{

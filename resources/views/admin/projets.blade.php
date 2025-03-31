@@ -9,13 +9,19 @@
 <body class="projects-body">
     <header class="projects-header">
         <h1 class="projects-title">Mes Projets</h1>
-        <a href="#" class="projects-create-button">Créer un projet</a>
+        <a href="{{ route('create_projet') }}" class="projects-create-button">Créer un projet</a>
     </header>
     <main class="projects-main">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <table class="projects-table">
             <thead class="projects-table-header">
                 <tr>
                     <th class="projects-table-cell">Nom</th>
+                    <th class="projects-table-cell">Image</th>
                     <th class="projects-table-cell">Description</th>
                     <th class="projects-table-cell">Actions</th>
                 </tr>
@@ -24,7 +30,10 @@
                 <!-- Exemple d'un projet -->
                 @foreach($projects as $project)
                 <tr class="projects-table-row">
-                    <td class="projects-table-cell">{{ $project->name }}</td>
+                    <td class="projects-table-cell">{{ $project->title }}</td>
+                    <td class="projects-table-cell">
+                        <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="projects-image">
+                    </td>
                     <td class="projects-table-cell">{{ $project->description }}</td>
                     <td class="projects-table-cell">
                         <a href="#" class="projects-edit-button">Modifier</a>
