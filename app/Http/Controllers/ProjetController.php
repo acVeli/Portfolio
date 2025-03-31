@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Projet;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProjetRequest;
+use App\Http\Services\ConvertImgToAvifService;
 
 class ProjetController extends Controller
 {
+
+    protected $convertImgToAvifService;
+
+    public function __construct(ConvertImgToAvifService $convertImgToAvifService)
+    {
+        $this->convertImgToAvifService = $convertImgToAvifService;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -39,12 +47,20 @@ class ProjetController extends Controller
             $validatedData['image'] = $imagePath;
         }
 
+        $this->convertImgToAvifService->convert(
+            public_path('storage/' . $validatedData['image']),
+            public_path('storage/images/' . pathinfo($validatedData['image'], PATHINFO_FILENAME) . '.avif')
+        );
+        unlink(public_path('storage/' . $validatedData['image']));
+
+        $validatedData['image'] = 'images/' . pathinfo($validatedData['image'], PATHINFO_FILENAME) . '.avif';
+
         // Créer une nouvelle instance de Projet
         $projet = new Projet();
         $projet->image = $validatedData['image'] ?? null;
         $projet->title = $validatedData['title'];
         $projet->description = $validatedData['description'];
-        $projet->tags = json_encode(explode(',', $validatedData['tags'])); // Si 'tags' est une liste séparée par des virgules
+        $projet->tags = json_encode(explode(' ', $validatedData['tags'])); // Si 'tags' est une liste séparée par des virgules
         $projet->project_link = $validatedData['project_link'] ?? null;
         $projet->github_link = $validatedData['github_link'] ?? null;
         $projet->save();
@@ -95,6 +111,12 @@ class ProjetController extends Controller
 
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('images', 'public');
+            $this->convertImgToAvifService->convert(
+                public_path('storage/' . $imagePath),
+                public_path('storage/images/' . pathinfo($imagePath, PATHINFO_FILENAME) . '.avif')
+            );
+            unlink(public_path('storage/' . $imagePath));
+            $imagePath = 'images/' . pathinfo($imagePath, PATHINFO_FILENAME) . '.avif';
             $validatedData['image'] = $imagePath;
         }
 

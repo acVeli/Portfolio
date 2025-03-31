@@ -102,7 +102,7 @@
                                     <div class="project-technologies">
                                         <ul>
                                             @foreach(explode(',', $project->tags) as $tag)
-                                            <li><a href="#">{{$tag}}</a></li>
+                                            <li><a href="#">{{str_replace(['"', ']','['],'',$tag)}}</a></li>
                                             @endforeach
                                         </ul>
                                     </div>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('tags');
             $table->string('project_link')->nullable();
             $table->string('github_link')->nullable();
