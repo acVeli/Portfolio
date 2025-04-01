@@ -90,6 +90,7 @@
                         <li class="project">
                             <div class="project-content">
                                 <div class="project-image">
+                                    <a class="project-image-author" href="{{$project->image_author_link}}"><span>Photo : {{$project->image_author}}</span></a>
                                     <img src="{{'storage/'.$project->image}}" alt="E-Commerce Platform">
                                 </div>
                                 <div class="project-details">
@@ -421,7 +422,7 @@
                     </ul>
                 </div>
                 <div class="footer-copy">
-                    <p>© {{ now()->year }} Your Name. All rights reserved.</p>
+                    <p>© {{ now()->year }} Anton COVU. All rights reserved.</p>
                 </div>
             </div>
         </div>

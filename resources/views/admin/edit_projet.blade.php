@@ -25,6 +25,16 @@
                 <label for="image">Image</label>
                 <input type="file" name="image" id="image" class="edit-projet-input" value="{{ old('image', $project->image) }}">
             </div>
+
+            <div class="form-group">
+                <label for="image_author">Auteur de l'image</label>
+                <input type="text" name="image_author" id="image_author" class="edit-projet-input" value="{{ old('image_author', $project->image_author) }}">
+            </div>
+
+            <div class="form-group">
+                <label for="image_author_link">Lien de l'auteur</label>
+                <input type="url" name="image_author_link" id="image_author_link" class="edit-projet-input" value="{{ old('image_author_link', $project->image_author_link) }}">
+            </div>
     
             <div class="form-group">
                 <label for="title">Titre</label>

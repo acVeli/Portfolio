@@ -24,6 +24,8 @@ class ProjetRequest extends FormRequest
         return [
             //image, title, description, tags, url, github
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image_author' => 'nullable|string|max:255',
+            'image_author_link' => 'nullable|url|max:255',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:1000',
             'tags' => 'nullable|string',

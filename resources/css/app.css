@@ -267,7 +267,19 @@ p.projects-footer-text {
     margin: 0;
 }
 
-
+.project-image-author {
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+}
+.project-image-author span {
+    color: #fff;
+}
 
 
 body.create-projet {
@@ -615,6 +627,7 @@ header.active {
     border-bottom-left-radius: 12px;
 }
 .project-image{
+    position: relative;
     overflow: hidden;
     max-height: 300px;
     animation-duration: .5s;

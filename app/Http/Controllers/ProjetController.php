@@ -58,6 +58,8 @@ class ProjetController extends Controller
         // Créer une nouvelle instance de Projet
         $projet = new Projet();
         $projet->image = $validatedData['image'] ?? null;
+        $projet->image_author = $validatedData['image_author'] ?? null;
+        $projet->image_author_link = $validatedData['image_author_link'] ?? null;
         $projet->title = $validatedData['title'];
         $projet->description = $validatedData['description'];
         $projet->tags = json_encode(explode(' ', $validatedData['tags'])); // Si 'tags' est une liste séparée par des virgules
@@ -100,14 +102,18 @@ class ProjetController extends Controller
 
         $projet = Projet::findOrFail($request->id);
 
-        $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:1000',
-            'tags' => 'nullable|string',
-            'project_link' => 'nullable|url|max:255',
-            'github_link' => 'nullable|url|max:255'
-        ]);
+        $validatedData = $request->validate(
+            [
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'image_author' => 'nullable|string|max:255',
+                'image_author_link' => 'nullable|url|max:255',
+                'title' => 'required|string|max:255',
+                'description' => 'required|string|max:1000',
+                'tags' => 'nullable|string',
+                'project_link' => 'nullable|url|max:255',
+                'github_link' => 'nullable|url|max:255'
+            ]
+        );
 
         if ($request->hasFile('image')) {
             // Supprimer l'ancienne image si elle existe

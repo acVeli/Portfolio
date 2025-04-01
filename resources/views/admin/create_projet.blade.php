@@ -29,6 +29,16 @@
             </div>
 
             <div class="form-group">
+                <label for="image_author" class="form-label">Auteur de l'image</label>
+                <input type="text" id="image_author" name="image_author" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="image_author_link" class="form-label">Lien de l'auteur</label>
+                <input type="url" id="image_author_link" name="image_author_link" class="form-input">
+            </div>
+
+            <div class="form-group">
                 <label for="title" class="form-label">Titre</label>
                 <input type="text" id="title" name="title" class="form-input">
             </div>

@@ -8,6 +8,8 @@ class Projet extends Model
 {
     protected $fillable = [
         'image',
+        'image_author',
+        'image_author_link',
         'title',
         'description',
         'tags',

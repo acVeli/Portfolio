@@ -11,6 +11,15 @@
         <h1 class="projects-title">Mes Projets</h1>
         <a href="{{ route('create_projet') }}" class="projects-create-button">Créer un projet</a>
     </header>
+    <nav class="dashboard-nav">
+        <ul class="dashboard-menu">
+            <li class="dashboard-menu-item"><a href="{{ route('dashboard') }}" class="dashboard-link">Accueil</a></li>
+            <li class="dashboard-menu-item"><a href="{{ route('projets') }}" class="dashboard-link">Projets</a></li>
+            <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">Skills</a></li>
+            <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">CV</a></li>
+            <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">Réseaux Sociaux</a></li>
+        </ul>
+    </nav>
     <main class="projects-main">
         @if(session('success'))
             <div class="alert alert-success">
