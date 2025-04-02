@@ -90,7 +90,7 @@
                         <li class="project">
                             <div class="project-content">
                                 <div class="project-image">
-                                    <a class="project-image-author" href="{{$project->image_author_link}}"><span>Photo : {{$project->image_author}}</span></a>
+                                    <a class="project-image-author" href="{{$project->image_author_link}}" target="_blank"><span>Photo : {{$project->image_author}}</span></a>
                                     <img src="{{'storage/'.$project->image}}" alt="E-Commerce Platform">
                                 </div>
                                 <div class="project-details">
