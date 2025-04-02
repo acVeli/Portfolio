@@ -5,6 +5,10 @@ use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
+Route::get('/phpinfo', function () {
+    phpinfo();
+})->middleware('check.secret')->name('phpinfo');
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
