@@ -9,7 +9,7 @@ class Technology extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'skills_category_id'];
+    protected $fillable = ['name', 'skills_category_id', 'pourcentage'];
 
     public function category()
     {

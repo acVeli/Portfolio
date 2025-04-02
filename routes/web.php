@@ -5,6 +5,7 @@ use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\SkillsCategoryController;
+use App\Http\Controllers\TechnologyController;
 
 Route::get('/phpinfo', function () {
     phpinfo();
@@ -54,3 +55,12 @@ Route::get('/admin/skills/edit/{id}', [SkillsCategoryController::class, 'edit'])
 Route::post('/admin/skills/update/{id}', [SkillsCategoryController::class, 'update'])->middleware('auth')->name('update_skills_categorie');
 
 Route::post('/admin/skills/delete/{id}', [SkillsCategoryController::class, 'destroy'])->middleware('auth')->name('delete_skills_categorie');
+
+Route::get('/admin/skills/technologies/create', [TechnologyController::class, 'index'])->middleware('auth')->name('create_technology');
+
+Route::get('/admin/skills/technologies/edit/{id}', [TechnologyController::class, 'edit'])->middleware('auth')->name('edit_technology');
+Route::post('/admin/skills/technologies/delete/{id}', [TechnologyController::class, 'destroy'])->middleware('auth')->name('delete_technology');
+Route::post('/admin/skills/technologies/update/{id}', [TechnologyController::class, 'update'])->middleware('auth')->name('update_technology');
+
+Route::post('/admin/skills/technologies/store', [TechnologyController::class, 'store'])->middleware('auth')->name('store_technology');
+

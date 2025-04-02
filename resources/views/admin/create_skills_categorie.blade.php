@@ -8,6 +8,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="createSkill-body">
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     <div class="createSkill-container">
         <h1 class="createSkill-title">Créer une Compétence</h1>
         <a href="{{ route('dashboard') }}" class="createSkill-link">Retour au Dashboard</a>

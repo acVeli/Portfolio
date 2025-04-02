@@ -131,6 +131,209 @@ a:hover {
     background-color: #e6f7ff;
 }
 
+/* Cacher les lignes technologies par défaut */
+.hidden {
+    display: none;
+}
+
+/* Styles pour le tableau des technologies */
+.technology-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+.technology-table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+.technology-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.technology-name, .technology-description {
+    padding: 10px;
+    text-align: center;
+    color: #555;
+}
+.technology-description p{
+    margin-top: 0.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+}
+
+.technology-link {
+    color: #28a745;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.technology-link:hover {
+    text-decoration: underline;
+}
+
+.technology-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.technology-button:hover {
+    background-color: #c82333;
+}
+
+/* Styles de base */
+.createSkill-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.createSkill-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.technology-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologyProgressBarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.technologyProgressBar{
+    width: 100%;
+    height: 10px;
+    background-color: #2600ff;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Titre principal */
+.createSkill-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Lien vers le Dashboard */
+.createSkill-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.createSkill-link:hover {
+    text-decoration: underline;
+}
+
+/* Form container */
+.createSkill-formContainer {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Formulaire */
+.createSkill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Groupes de formulaire */
+.createSkill-formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Libellés */
+.createSkill-label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Champs de saisie */
+.createSkill-input,
+.createSkill-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.createSkill-input:focus,
+.createSkill-select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Barre de progression */
+.createSkill-range {
+    width: 100%;
+}
+
+#createSkill-range-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Valeur de la barre de progression */
+#createSkill-range-container span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Bouton de soumission */
+.createSkill-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.createSkill-button:hover {
+    background-color: #218838;
+}
+.skillsCategory-expand-button{
+    cursor: pointer;
+}
 .skillsCategory-name {
     width: 75%;
     padding: 15px;

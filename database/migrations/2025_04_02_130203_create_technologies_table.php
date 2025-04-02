@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('skills_category_id')->constrained()->onDelete('cascade');
             $table->string('name');
+            $table->integer('pourcentage')->default(0);
             $table->timestamps();
         });
     }
