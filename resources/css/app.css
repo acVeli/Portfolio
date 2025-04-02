@@ -92,6 +92,165 @@ a:hover {
     line-height: 32px;
     letter-spacing: 0.5px;
 }
+
+/*Skills*/
+/* styles.css */
+.skillsCategory-body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.skillsCategory-container {
+    width: 80%;
+    margin: 50px auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.skillsCategory-title {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skillsCategory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skillsCategory-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.skillsCategory-row:hover {
+    background-color: #e6f7ff;
+}
+
+.skillsCategory-name {
+    width: 75%;
+    padding: 15px;
+    color: #555;
+    text-align: left;
+}
+
+.skillsCategory-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.skillsCategory-link:hover {
+    text-decoration: underline;
+}
+
+.skillsCategory-form {
+    display: inline;
+}
+
+.skillsCategory-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.skillsCategory-button:hover {
+    background-color: #ff7875;
+}
+
+/* styles.css */
+.createSkill-body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.createSkill-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.createSkill-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.createSkill-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.createSkill-link:hover {
+    text-decoration: underline;
+}
+
+.createSkill-formContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.createSkill-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.createSkill-formGroup {
+    margin-bottom: 15px;
+}
+
+.createSkill-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.createSkill-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.createSkill-input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.createSkill-button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.createSkill-button:hover {
+    background-color: #218838;
+}
+
+
 /* Dashboard */
 body.dashboard-body {
     font-family: Arial, sans-serif;
@@ -100,12 +259,6 @@ body.dashboard-body {
     background-color: #f4f4f9;
 }
 
-header.dashboard-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
 h1.dashboard-title {
     margin: 0;
@@ -176,7 +329,7 @@ body.projects-body {
     background-color: #f4f4f9;
 }
 
-header.projects-header {
+header.projects-header, header.dashboard-header  {
     background-color: #333;
     color: #fff;
     padding: 20px;
