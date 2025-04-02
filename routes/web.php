@@ -25,7 +25,8 @@ Route::post('/register', [RegisteredUserController::class, 'store'])->middleware
 
 Route::get('/', function () {
     $projects = \App\Models\Projet::all();
-    return view('homepage', compact('projects'));
+    $skillsCategories = \App\Models\SkillsCategory::all();
+    return view('homepage', compact('projects', 'skillsCategories'));
 });
 
 Route::get('/admin', function () {
@@ -59,7 +60,9 @@ Route::post('/admin/skills/delete/{id}', [SkillsCategoryController::class, 'dest
 Route::get('/admin/skills/technologies/create', [TechnologyController::class, 'index'])->middleware('auth')->name('create_technology');
 
 Route::get('/admin/skills/technologies/edit/{id}', [TechnologyController::class, 'edit'])->middleware('auth')->name('edit_technology');
+
 Route::post('/admin/skills/technologies/delete/{id}', [TechnologyController::class, 'destroy'])->middleware('auth')->name('delete_technology');
+
 Route::post('/admin/skills/technologies/update/{id}', [TechnologyController::class, 'update'])->middleware('auth')->name('update_technology');
 
 Route::post('/admin/skills/technologies/store', [TechnologyController::class, 'store'])->middleware('auth')->name('store_technology');

@@ -34,7 +34,7 @@
             </div>
             <div class="createSkill-formGroup">
                 <label for="progress-bar" class="createSkill-label">Pourcentage de maitrise</label>
-                <input type="range" id="progress-bar" name="progress-bar" min="0" max="100" value="50" class="createSkill-range">
+                <input type="range" id="progress-bar" name="pourcentage" min="0" max="100" value="50" class="createSkill-range">
                 <span id="progress-bar-value">50%</span>
             </div>
             <button type="submit" class="createSkill-button">Créer</button>

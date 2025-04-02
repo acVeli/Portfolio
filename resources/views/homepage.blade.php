@@ -165,177 +165,28 @@
             </div>
             <div class="skills-grid">
                 <ul class="skills-list">
-                    <li class="skills-category">
-                        <div class="skills-category-title">
-                            <h4>Frontend</h4>
-                        </div>
-                        <div class="skills-category-list">
-                            <ul>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>HTML</h5>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="95"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>JavaScript</h5>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="90"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>React</h5>
-                                        <span>92%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="92"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>TypeScript</h5>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="85"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Next.js</h5>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="80"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>TailwindCSS</h5>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="90"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="skills-category">
-                        <div class="skills-category-title">
-                            <h4>Backend</h4>
-                        </div>
-                        <div class="skills-category-list">
-                            <ul>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Node.js</h5>
-                                        <span>75%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="75"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Express</h5>
-                                        <span>75%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="75"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>MongoDB</h5>
-                                        <span>70%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="70"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>REST API</h5>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="85"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>GraphQL</h5>
-                                        <span>65%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="65"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="skills-category">
-                        <div class="skills-category-title">
-                            <h4>Tools & Others</h4>
-                        </div>
-                        <div class="skills-category-list">
-                            <ul>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Git & GitHub</h5>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="90"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Figma</h5>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="80"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Responsive Design</h5>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="95"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>Jest</h5>
-                                        <span>70%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="70"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="skills-category-item">
-                                        <h5>CI/CD</h5>
-                                        <span>65%</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="progress-bar" data-percent="65"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    @foreach($skillsCategories as $category)
+                        <li class="skills-category">
+                            <div class="skills-category-title">
+                                <h4>{{ $category->name }}</h4>
+                            </div>
+                            <div class="skills-category-list">
+                                <ul>
+                                    @foreach($category->technologies as $technology)
+                                        <li>
+                                            <div class="skills-category-item">
+                                                <h5>{{ $technology->name }}</h5>
+                                                <span>{{ $technology->pourcentage }}%</span>
+                                            </div>
+                                            <div class="skill-bar">
+                                                <div class="progress-bar" data-percent="{{ $technology->pourcentage }}"></div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
