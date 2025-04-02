@@ -11,11 +11,11 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('auth.register');
-})->name('register');
+})->middleware('check.secret')->name('register');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'] )->name('login.post');
 
-Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.post');
+Route::post('/register', [RegisteredUserController::class, 'store'])->middleware('check.secret')->name('register.post');
 
 Route::get('/', function () {
     $projects = \App\Models\Projet::all();

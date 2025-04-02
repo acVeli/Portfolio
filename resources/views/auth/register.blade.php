@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form class="authform" method="POST" action="{{ route('register') }}">
+    <form class="authform" method="POST" action="{{ route('register') }}?secret={{ $expectedToken }}">
         @csrf
 
         <!-- Name -->
