@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjetController;
+use App\Http\Controllers\TechnologyController;
+use App\Http\Controllers\SkillsCategoryController;
+use App\Http\Controllers\CurriculumVitaeController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\SkillsCategoryController;
-use App\Http\Controllers\TechnologyController;
 
 Route::get('/phpinfo', function () {
     phpinfo();
@@ -67,3 +68,14 @@ Route::post('/admin/skills/technologies/update/{id}', [TechnologyController::cla
 
 Route::post('/admin/skills/technologies/store', [TechnologyController::class, 'store'])->middleware('auth')->name('store_technology');
 
+Route::get('/admin/cv', [CurriculumVitaeController::class, 'index'])->name('cv');
+
+Route::get('/admin/cv/create', [CurriculumVitaeController::class, 'create'])->name('cv.create');
+
+Route::get('/admin/cv/download', [CurriculumVitaeController::class, 'download'])->name('cv.download');
+
+Route::get('/admin/cv/edit', [CurriculumVitaeController::class, 'upload'])->name('cv.edit');
+
+Route::post('/admin/cv/upload', [CurriculumVitaeController::class, 'update'])->name('cv.update');
+
+Route::post('/admin/cv/store', [CurriculumVitaeController::class, 'store'])->name('cv.store');

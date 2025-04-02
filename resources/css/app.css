@@ -130,12 +130,119 @@ a:hover {
 .skillsCategory-row:hover {
     background-color: #e6f7ff;
 }
+/* Général */
+.curriculum-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.curriculum-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Titre */
+.curriculum-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.curriculum-form {
+    margin-bottom: 20px;
+}
+
+.curriculum-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.curriculum-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.curriculum-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.curriculum-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Bouton */
+.curriculum-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.curriculum-button:hover {
+    background-color: #0056b3;
+}
+
+/* Visionneuse */
+.curriculum-viewer {
+    margin-top: 20px;
+}
+
+.curriculum-iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 /* Cacher les lignes technologies par défaut */
 .hidden {
     display: none;
 }
-
+.alert.alert-warning{
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+}
+.cv-container{
+    min-height: 460px;
+}
+.cv-container, .cv-upload-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
 /* Styles pour le tableau des technologies */
 .technology-table {
     width: 100%;
