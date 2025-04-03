@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 
 class CurriculumVitaeController extends Controller
 {
+
     public function index()
     {
         $cv = \App\Models\CurriculumVitae::all();
         return view('admin.curriculum_vitae', compact('cv'));
     }
 
-    public function upload(){
-        return view('admin.upload_curriculum_vitae');
+    public function edit(){
+        return view('admin.edit_curriculum_vitae');
     }
 
     public function create()
@@ -32,8 +33,8 @@ class CurriculumVitaeController extends Controller
         if ($request->session()->has('error')) {
             return redirect()->back()->with('error', 'Un CV existe déjà dans la base de données.');
         }
-
-        $fileName = time() . '.' . $request->cv->extension();
+        
+        $fileName = 'CV' . '.' . $request->cv->extension();
         $request->cv->move(public_path('uploads'), $fileName);
 
         $cv = new \App\Models\CurriculumVitae();	
@@ -49,10 +50,10 @@ class CurriculumVitaeController extends Controller
             'cv' => 'required|mimes:pdf|max:2048',
         ]);
 
-        $fileName = time() . '.' . $request->cv->extension();
+        $fileName = 'CV' . '.' . $request->cv->extension();
         $request->cv->move(public_path('uploads'), $fileName);
 
-        return redirect()->back()->with('success', 'CV updated successfully.');
+        return redirect()->route('cv')->with('success', 'CV modifié avec succès.');
     }
 
     public function limitOneEntry()

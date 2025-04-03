@@ -20,6 +20,11 @@
             <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">Réseaux Sociaux</a></li>
         </ul>
     </nav>
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div>
         @if(!$cv->isEmpty())
         <div class="cv-container">

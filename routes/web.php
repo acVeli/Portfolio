@@ -74,7 +74,7 @@ Route::get('/admin/cv/create', [CurriculumVitaeController::class, 'create'])->na
 
 Route::get('/admin/cv/download', [CurriculumVitaeController::class, 'download'])->name('cv.download');
 
-Route::get('/admin/cv/edit', [CurriculumVitaeController::class, 'upload'])->name('cv.edit');
+Route::get('/admin/cv/edit', [CurriculumVitaeController::class, 'edit'])->name('cv.edit');
 
 Route::post('/admin/cv/upload', [CurriculumVitaeController::class, 'update'])->name('cv.update');
 
