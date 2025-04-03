@@ -225,7 +225,7 @@ a:hover {
 .hidden {
     display: none;
 }
-.alert.alert-warning{
+.alert.alert-warning, .alert.alert-danger{
     text-align: center;
     width: fit-content;
     margin: 20px auto;

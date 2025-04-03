@@ -3,9 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Services\limitOneEntry;
+use App\Models\CurriculumVitae;
 
 class CurriculumVitaeController extends Controller
 {
+
+    protected $limitOneEntry;
+
+    public function __construct(limitOneEntry $limitOneEntry)
+    {
+        $this->limitOneEntry = $limitOneEntry;
+    }
 
     public function index()
     {
@@ -29,7 +38,7 @@ class CurriculumVitaeController extends Controller
         ]);
 
         // Check if the user already has a CV entry
-        $this->limitOneEntry();
+        $this->limitOneEntry->check(CurriculumVitae::class);
         if ($request->session()->has('error')) {
             return redirect()->back()->with('error', 'Un CV existe déjà dans la base de données.');
         }
@@ -54,14 +63,6 @@ class CurriculumVitaeController extends Controller
         $request->cv->move(public_path('uploads'), $fileName);
 
         return redirect()->route('cv')->with('success', 'CV modifié avec succès.');
-    }
-
-    public function limitOneEntry()
-    {
-        $cvCount = \App\Models\CurriculumVitae::count();
-        if ($cvCount >= 1) {
-            return redirect()->back()->with('error', 'Il y a déjà une entrée de CV dans la base de données.');
-        }
     }
 
 }
