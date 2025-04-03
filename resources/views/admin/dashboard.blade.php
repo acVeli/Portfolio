@@ -16,7 +16,7 @@
             <li class="dashboard-menu-item"><a href="{{ route('projets') }}" class="dashboard-link">Projets</a></li>
             <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">Skills</a></li>
             <li class="dashboard-menu-item"><a href="{{ route('cv') }}" class="dashboard-link">CV</a></li>
-            <li class="dashboard-menu-item"><a href="{{ route('skills') }}" class="dashboard-link">Réseaux Sociaux</a></li>
+            <li class="dashboard-menu-item"><a href="{{ route('social_networks') }}" class="dashboard-link">Réseaux Sociaux</a></li>
         </ul>
     </nav>
     <main class="dashboard-main">

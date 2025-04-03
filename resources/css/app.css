@@ -221,6 +221,130 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Réseaux sociaux */
+.socialMedia-container {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.socialMedia-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.socialMedia-table-header th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.socialMedia-table-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.socialMedia-row td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.socialMedia-edit-button, .socialMedia-delete-button {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.socialMedia-edit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.socialMedia-delete-button {
+    background-color: #DC3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.socialMedia-delete-button:hover {
+    background-color: #C82333;
+}
+
+.socialMedia-edit-button:hover {
+    background-color: #0056b3;
+}
+.socialMedia-container {
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.socialMedia-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.socialMedia-form-group {
+    margin-bottom: 15px;
+}
+
+.socialMedia-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.socialMedia-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.socialMedia-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.socialMedia-submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.socialMedia-submit-button:hover {
+    background-color: #45A049;
+}
+a.socialMedia-edit-button {
+    color: #fff;
+}
+td.socialMedia-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 /* Cacher les lignes technologies par défaut */
 .hidden {
     display: none;

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\TechnologyController;
+use App\Http\Controllers\SocialNetworkController;
 use App\Http\Controllers\SkillsCategoryController;
 use App\Http\Controllers\CurriculumVitaeController;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -68,14 +69,26 @@ Route::post('/admin/skills/technologies/update/{id}', [TechnologyController::cla
 
 Route::post('/admin/skills/technologies/store', [TechnologyController::class, 'store'])->middleware('auth')->name('store_technology');
 
-Route::get('/admin/cv', [CurriculumVitaeController::class, 'index'])->name('cv');
+Route::get('/admin/cv', [CurriculumVitaeController::class, 'index'])->middleware('auth')->name('cv');
 
-Route::get('/admin/cv/create', [CurriculumVitaeController::class, 'create'])->name('cv.create');
+Route::get('/admin/cv/create', [CurriculumVitaeController::class, 'create'])->middleware('auth')->name('cv.create');
 
-Route::get('/admin/cv/download', [CurriculumVitaeController::class, 'download'])->name('cv.download');
+Route::get('/admin/cv/download', [CurriculumVitaeController::class, 'download'])->middleware('auth')->name('cv.download');
 
-Route::get('/admin/cv/edit', [CurriculumVitaeController::class, 'edit'])->name('cv.edit');
+Route::get('/admin/cv/edit', [CurriculumVitaeController::class, 'edit'])->middleware('auth')->name('cv.edit');
 
-Route::post('/admin/cv/upload', [CurriculumVitaeController::class, 'update'])->name('cv.update');
+Route::post('/admin/cv/upload', [CurriculumVitaeController::class, 'update'])->middleware('auth')->name('cv.update');
 
-Route::post('/admin/cv/store', [CurriculumVitaeController::class, 'store'])->name('cv.store');
+Route::post('/admin/cv/store', [CurriculumVitaeController::class, 'store'])->middleware('auth')->name('cv.store');
+
+Route::get('/admin/social_networks', [SocialNetworkController::class, 'index'])->middleware('auth')->name('social_networks');
+
+Route::get('/admin/social_networks/create', [SocialNetworkController::class, 'create'])->middleware('auth')->name('create_social_network');
+
+Route::post('/admin/social_networks/store', [SocialNetworkController::class, 'store'])->middleware('auth')->name('store_social_network');
+
+Route::get('/admin/social_networks/edit/{id}', [SocialNetworkController::class, 'edit'])->middleware('auth')->name('edit_social_network');
+
+Route::post('/admin/social_networks/update/{id}', [SocialNetworkController::class, 'update'])->middleware('auth')->name('update_social_network');
+
+Route::post('/admin/social_networks/delete/{id}', [SocialNetworkController::class, 'destroy'])->middleware('auth')->name('delete_social_network');
