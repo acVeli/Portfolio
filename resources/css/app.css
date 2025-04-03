@@ -2160,6 +2160,7 @@ footer{
 
 @media screen and (max-width: 488px) {
     .main-container{
+        height: 80vh;
         padding-bottom: 80px;
     }
     .digital-experiences h2 {
